@@ -38,11 +38,16 @@ public class generate : MonoBehaviour
     // Update is called once per frame
     void  generates(){
         Vector2 min = Camera.main.ViewportToWorldPoint (new Vector2 (0,0));
+       
         Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1,1));
         Vector3 buff = min;
         Vector3 buff2 = max;
+        
+        
         Vector3 xcam = buff + camera.transform.position;
         Vector3 xcam2 = buff2 + camera.transform.position;
+       
+        
         int i = 0;
         float sum = 0;
         float z = 7f;
@@ -113,7 +118,10 @@ public class generate : MonoBehaviour
             if(flag == 0){
                 a[i] = Instantiate(planet, position, Quaternion.identity,parent) as GameObject;
                 newColor = new Color(0.5f,0.5f,0.5f,1f);
+            
+        
                 a[i].GetComponent<SpriteRenderer>().color = newColor;
+                
                 Debug.Log("sum: i :"+ i + sum*2); 
                 Debug.Log("min: i :"+ i + mini);  
                 i += 1;
