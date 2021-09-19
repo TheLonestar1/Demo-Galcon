@@ -53,7 +53,7 @@ public class accentuation : MonoBehaviour
                 Color newColor = new Color(0f, 1f, 1f, 1f);
                 render.color = newColor;
 		    }
-            else if (Physics.Raycast(this.lastRay, out raycastHit) && raycastHit.collider.tag == "netural"  && planets != null) 
+            else if (Physics.Raycast(this.lastRay, out raycastHit) && raycastHit.collider.tag == "netural"  && planets != null && flag == 0) 
             {
                 int n = planets.amoutShips / 2;
                 planets.amoutShips -= n;
